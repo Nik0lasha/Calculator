@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_marginEnd="278dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="115dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="460dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="0.549"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="65dp"
+            motion:layout_constraintVertical_bias="0.505"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="17dp"
+            android:id="@+id/btn_plus" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="191dp"
+            android:layout_marginStart="104dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.588"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="115dp"
+            android:id="@+id/btn_minus"
+            motion:layout_constraintVertical_bias="0.083" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="65dp"
+            android:layout_marginBottom="460dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="65dp"
+            android:id="@+id/btn_multiplication"
+            motion:layout_constraintStart_toEndOf="@+id/btn_minus"
+            motion:layout_constraintTop_toTopOf="@+id/btn_minus"
+            motion:layout_constraintEnd_toStartOf="@+id/btn_division"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintHorizontal_bias="0.6" />
+        <Constraint
+            android:layout_height="65dp"
+            android:layout_marginBottom="460dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="65dp"
+            android:id="@+id/btn_division"
+            motion:layout_constraintTop_toTopOf="@+id/btn_minus"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_editor_absoluteX="315dp" />
+        <Constraint
+            android:layout_height="65dp"
+            android:layout_marginBottom="492dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="65dp"
+            android:id="@+id/btn_minus"
+            motion:layout_constraintStart_toEndOf="@+id/btn_plus"
+            motion:layout_constraintTop_toTopOf="@+id/Text_operation"
+            android:layout_marginTop="115dp"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintEnd_toStartOf="@+id/btn_multiplication" />
+        <Constraint
+            android:layout_marginEnd="278dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="460dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="65dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="17dp"
+            android:id="@+id/btn_plus"
+            motion:layout_constraintTop_toTopOf="@+id/btn_minus"
+            motion:layout_constraintHorizontal_bias="0.47"
+            motion:layout_constraintVertical_bias="0.0" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end" />
+</MotionScene>

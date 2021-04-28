@@ -39,14 +39,14 @@ class MainActivity : AppCompatActivity() {
                 val input1=editSecond.text.toString().toDouble()
                 val input2 = editFirst.text.toString().toDouble()
                 var result=0.0
-                 when (operator) {
+                when (operator) {
                     "+" -> input1 + input2
                     "-" -> input1 - input2
                     "*" -> input1 * input2
                     "/" -> input1 / input2
                     else -> "invalid operator or number"
                 }
-                println("Results = $result")
+                textResult.text=result.toString()
             }
 
 
